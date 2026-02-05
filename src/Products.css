@@ -1,0 +1,204 @@
+/* ===== Global Page Setup ===== */
+.products-page {
+  padding: 40px 0;
+  min-height: 100vh;
+  /* Deep dark gradient background is required for glassmorphism to look good */
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #f8fafc; /* Light text for dark mode */
+}
+
+/* ===== Products hero section ===== */
+.products-hero {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 40px 48px;
+  border-radius: 32px;
+  
+  /* Glass Effect */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px); /* The "Frosted" look */
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products-hero h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 800;
+  
+  background: linear-gradient(to right, #fff, #94a3b8);
+  
+  background-clip: text; 
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.products-hero p {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #cbd5e1; /* Muted light gray */
+}
+
+/* Cart button in hero */
+.hero-cart-btn {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80; /* Neon green text */
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 20px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-cart-btn:hover {
+  background: #22c55e;
+  color: #052e16; /* Dark text on hover for contrast */
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.6); /* Glow effect */
+  transform: translateY(-2px);
+  border-color: transparent;
+}
+
+/* ===== Products grid ===== */
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+/* ===== Product card ===== */
+.product-card {
+  /* Glass Card */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  
+  border-radius: 24px;
+  padding: 20px;
+  text-align: center;
+
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* Image wrapper */
+.image-wrap {
+  height: 180px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 18px;
+  
+  /* White background for the image slot so product photos look correct */
+  background: #ffffff; 
+  padding: 15px;
+}
+
+.image-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .image-wrap img {
+  transform: scale(1.05);
+}
+
+/* Product text */
+.product-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.price {
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #818cf8; /* Light Indigo/Purple for price */
+  text-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+}
+
+/* Add to cart button */
+.add-btn {
+  width: 100%;
+  padding: 14px;
+  
+  /* Gradient button */
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.4); /* Purple glow */
+}
+
+/* ===== Toast message ===== */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+
+  /* Glass Toast */
+  background: rgba(16, 185, 129, 0.85); /* Green glass */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  color: white;
+  padding: 16px 24px;
+  border-radius: 18px;
+  font-weight: 600;
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

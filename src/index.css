@@ -1,0 +1,121 @@
+/* ===== Global Setup ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  
+  /* Match the dark gradient from the products page */
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  color: #f1f5f9; /* Light text for readability */
+  min-height: 100vh;
+}
+
+/* ---------- Top Header ---------- */
+
+.top-header {
+  /* Glass Effect */
+  background: rgba(15, 23, 42, 0.6); /* Semi-transparent dark blue */
+  backdrop-filter: blur(12px);        /* The blur magic */
+  -webkit-backdrop-filter: blur(12px);
+  
+  /* Subtle border at bottom to separate from content */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* Keeps the header stuck to top while scrolling */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.top-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 32px; /* Slightly reduced padding for a sleeker look */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand styling with Gradient Text */
+.brand-name {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.1;
+  display: block;
+  
+  /* Neon Gradient Text */
+  background: linear-gradient(to right, #818cf8, #c084fc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback */
+}
+
+.brand-sub {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #94a3b8; /* Muted gray-blue */
+}
+
+/* User Actions Section */
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  
+  /* Optional: Add a subtle glass capsule around the user area */
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.user-pill {
+  width: 38px;
+  height: 38px;
+  /* Gradient Circle */
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4); /* Glow effect */
+}
+
+.username {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+/* Logout Button */
+.logout-btn {
+  /* Semi-transparent red button */
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171; /* Lighter red text */
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.25);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3); /* Red glow on hover */
+  transform: translateY(-1px);
+}
