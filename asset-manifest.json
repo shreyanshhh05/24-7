@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/shreyanshhh05/24-7/static/css/main.f3b021c0.css",
+    "main.js": "/shreyanshhh05/24-7/static/js/main.5c6ccfcb.js",
+    "index.html": "/shreyanshhh05/24-7/index.html",
+    "main.f3b021c0.css.map": "/shreyanshhh05/24-7/static/css/main.f3b021c0.css.map",
+    "main.5c6ccfcb.js.map": "/shreyanshhh05/24-7/static/js/main.5c6ccfcb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3b021c0.css",
+    "static/js/main.5c6ccfcb.js"
+  ]
+}
