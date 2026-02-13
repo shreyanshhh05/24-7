@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
 
-"homepage": "https://shreyanshhh05.github.io/24-7",
+  "homepage": "https://shreyanshhh05.github.io/24-7",
 
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
